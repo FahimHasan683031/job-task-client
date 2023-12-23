@@ -37,9 +37,9 @@ const CreateTask = () => {
     }
     return (
         <div className="max-w-screen-xl mx-auto px-6">
-            <form className="max-w-md mx-auto bg-teal-100 drop-shadow-lg my-24 px-6 py-8 rounded-lg text-base text-black" onSubmit={formHandle} action="">
+            <form className="max-w-md mx-auto bg-sky-200 drop-shadow-lg my-24 px-6 py-8 rounded-lg text-base text-black" onSubmit={formHandle} action="">
 
-                <h1 className="text-center text-teal-600 mb-12 md:text-5xl text-3xl font-bold">Create Task</h1>
+                <h1 className="text-center text-sky-600 mb-12 md:text-5xl text-3xl font-bold">Create Task</h1>
 
                 
                     <div className=" w-full">
@@ -81,7 +81,7 @@ const CreateTask = () => {
                     <textarea required className=" my-3 w-full md:my-6 drop-shadow-lg p-3 rounded flex-1 " name="taskDescription" placeholder="Enter Task Description" id="" rows="5"></textarea>
                   
 
-                <input className="w-full font-bold my-3 cursor-pointer py-3 rounded-md text-white bg-teal-600" type="submit" value="Create" />
+                <input className="w-full font-bold my-3 cursor-pointer py-3 rounded-md text-white bg-sky-600" type="submit" value="Create" />
             </form>
 
         </div>

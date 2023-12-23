@@ -10,7 +10,7 @@ const Banner = () => {
                     <div>
                         <h1 className="text-5xl font-bold text-white">Welcome!</h1>
 
-                        <h3 className="text-2xl font-bold my-4 text-teal-500"><Typewriter
+                        <h3 className="text-2xl font-bold my-4 text-sky-500"><Typewriter
                             words={['Explore Our World', "Visit Our Would"]}
                             loop={0}
                             cursor
@@ -21,7 +21,7 @@ const Banner = () => {
                         /></h3>
                         <p className="text-gray-200 mb-5">Transform Your Space with Expert Home Repairs! Discover top-notch solutions for all your home improvement needs on our website. From quick fixes to major renovations, we've got you covered. Get started now for a more comfortable, beautiful, and functional home.</p>
 
-                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-teal-600 ">Services</Link>
+                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-sky-600 ">Services</Link>
                     </div>
                     <div>
                         <img src={'https://i.ibb.co/zPWWHF7/home-calculator-03-600x536-removebg-preview.png'} alt="" />
@@ -38,7 +38,7 @@ const Banner = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7 z-40 relative items-center max-w-5xl pt-10 mx-auto px-6">
                     <div>
                         <h1 className="text-5xl font-bold text-white">Welcome!</h1>
-                        <h3 className="text-2xl font-bold my-4 text-teal-500"><Typewriter
+                        <h3 className="text-2xl font-bold my-4 text-sky-500"><Typewriter
                             words={['Explore Our World', "Visit Our Would"]}
                             loop={0}
                             cursor
@@ -49,7 +49,7 @@ const Banner = () => {
                         /></h3>
                         <p className="text-gray-200 mb-5">Transform Your Space with Expert Home Repairs! Discover top-notch solutions for all your home improvement needs on our website. From quick fixes to major renovations, we've got you covered. Get started now for a more comfortable, beautiful, and functional home.</p>
 
-                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-teal-600 ">Services</Link>
+                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-sky-600 ">Services</Link>
                     </div>
                     <div>
                         <img src={'https://i.ibb.co/zPWWHF7/home-calculator-03-600x536-removebg-preview.png'} alt="" />
@@ -66,7 +66,7 @@ const Banner = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7 z-40 relative items-center max-w-5xl pt-10 mx-auto px-6">
                     <div>
                         <h1 className="text-5xl font-bold text-white">Welcome!</h1>
-                        <h3 className="text-2xl font-bold my-4 text-teal-500"><Typewriter
+                        <h3 className="text-2xl font-bold my-4 text-sky-500"><Typewriter
                             words={['Explore Our World', "Visit Our Would"]}
                             loop={0}
                             cursor
@@ -77,7 +77,7 @@ const Banner = () => {
                         /></h3>
                         <p className="text-gray-200 mb-5">Transform Your Space with Expert Home Repairs! Discover top-notch solutions for all your home improvement needs on our website. From quick fixes to major renovations, we've got you covered. Get started now for a more comfortable, beautiful, and functional home.</p>
 
-                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-teal-600 ">Services</Link>
+                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-sky-600 ">Services</Link>
                     </div>
                     <div>
                         <img src={'https://i.ibb.co/zPWWHF7/home-calculator-03-600x536-removebg-preview.png'} alt="" />
@@ -94,7 +94,7 @@ const Banner = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-7 z-40 relative items-center max-w-5xl pt-10 mx-auto px-6">
                     <div>
                         <h1 className="text-5xl font-bold text-white">Welcome!</h1>
-                        <h3 className="text-2xl font-bold my-4 text-teal-500"><Typewriter
+                        <h3 className="text-2xl font-bold my-4 text-sky-500"><Typewriter
                             words={['Explore Our World', "Visit Our Would"]}
                             loop={0}
                             cursor
@@ -105,7 +105,7 @@ const Banner = () => {
                         /></h3>
                         <p className="text-gray-200 mb-5">Transform Your Space with Expert Home Repairs! Discover top-notch solutions for all your home improvement needs on our website. From quick fixes to major renovations, we've got you covered. Get started now for a more comfortable, beautiful, and functional home.</p>
 
-                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-teal-600 ">Services</Link>
+                        <Link className="px-4 py-2 text-white font-medium rounded-sm bg-sky-600 ">Services</Link>
                     </div>
                     <div>
                         <img src={'https://i.ibb.co/zPWWHF7/home-calculator-03-600x536-removebg-preview.png'} alt="" />

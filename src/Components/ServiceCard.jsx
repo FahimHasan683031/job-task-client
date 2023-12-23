@@ -21,11 +21,11 @@ const ServiceCard = ({service}) => {
             </div>
             <img src={serviceImage} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
             <div className="px-5">
-                <h1 className="text-xl my-3 font-bold text-teal-600">{serviceName}</h1>
+                <h1 className="text-xl my-3 font-bold text-sky-600">{serviceName}</h1>
                 <p className="font-medium text-slate-600 text-[15px]">{serviceDescription.slice(0,100)+'...'}</p>
                 <div className="my-5 flex justify-between">
-                    <Link to={`/services/${service._id}`}><button className="px-3 py-[6px] text-white bg-teal-600 rounded-sm text-sm font-bold"> Details</button></Link>
-                    <h4 className="text-lg font-bold text-teal-600">Price: {price}$</h4>
+                    <Link to={`/services/${service._id}`}><button className="px-3 py-[6px] text-white bg-sky-600 rounded-sm text-sm font-bold"> Details</button></Link>
+                    <h4 className="text-lg font-bold text-sky-600">Price: {price}$</h4>
                 </div>
             </div>
         </div>

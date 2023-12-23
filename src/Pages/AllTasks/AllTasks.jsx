@@ -1,29 +1,40 @@
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import { useLocation } from "react-router-dom";
-import useMyServices from "../../Hoocks/useMyServices";
+import TaskCard from "./TaskCard";
+import useAuthContext from "../../Hoocks/useAuthContext";
+import useAxiosSecure from "../../Hoocks/useAxiosSicure";
+
+
 
 const AllTasks = () => {
-    const [services] =useMyServices()
+    const axiosSecure =useAxiosSecure()
+    const {user}=useAuthContext()
+    const [tasks,setTasks] =useState([])
     const location = useLocation()
     useEffect(() => {
         document.title = "Home Repair" + location.pathname
-    }, [location])
+        axiosSecure.get(`/tasks?email=${user?.email}`)
+        .then(data=>setTasks(data.data))
+        .catch(err=>console.log(err.message))
+    }, [location,axiosSecure,user])
 
-   
+   if(tasks?.length===0){
+    return(
+        <div className="flex align-middle h-screen justify-center items-center">
+            <h1 className="text-5xl font-bold text-sky-500">You do not have any tasks.</h1>
+        </div>
+    )
+   }
 
     return (
         <div>
-            <div className="bg-[url('https://i.ibb.co/bQ1JWBp/mp-our-services-mobile.png')]  relative bg-no-repeat bg-cover bg-top py-10 lg:py-16">
-                <div className="absolute h-full w-full top-0 z-0 left-0 bg-[#080808a8]"></div>
-                <div className="text-center relative z-20">
-                    <h1 className="text-4xl lg:text-5xl mb-3 font-bold text-teal-500">My Services</h1>
-                </div>
-
-            </div>
+            
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto px-6 my-16">
-                <h1>{services?.length}</h1>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-xl mx-auto px-6 mt-7 mb-16">
+                {
+                    tasks?.map(task=><TaskCard key={task._id} task={task}/>)
+                }
             </div>
 
 

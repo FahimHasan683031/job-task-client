@@ -7,15 +7,15 @@ import useAuthContext from './useAuthContext';
 const useMyServices = () => {
     const axiosSecure=useAxiosSecure()
     const { user } = useAuthContext()
-    const {refetch,data: services=[]}= useQuery({
+    const {refetch,data: tasks=[]}= useQuery({
         queryKey:['MYservicesData'],
         queryFn:async()=>{
-           const res = await axiosSecure.get(`/api/v1/services?email=${user?.email}`)
+           const res = await axiosSecure.get(`/tasks?email=${user?.email}`)
            return res.data;
         }
     })
     return (
-        [services,refetch]
+        [tasks,refetch]
     );
 };
 

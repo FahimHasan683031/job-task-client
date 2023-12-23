@@ -8,7 +8,7 @@ const Faq = () => {
                 <div className="join join-vertical w-full">
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4" checked="checked" />
-                        <div className="collapse-title text-xl text-teal-600 font-medium">
+                        <div className="collapse-title text-xl text-sky-600 font-medium">
                         What types of home repair services do you offer?
                         </div>
                         <div className="collapse-content">
@@ -18,7 +18,7 @@ const Faq = () => {
 
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4"  />
-                        <div className="collapse-title text-xl text-teal-600 font-medium">
+                        <div className="collapse-title text-xl text-sky-600 font-medium">
                         How do I request a home repair service?
                         </div>
                         <div className="collapse-content">
@@ -28,7 +28,7 @@ const Faq = () => {
 
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4"  />
-                        <div className="collapse-title text-xl text-teal-600 font-medium">
+                        <div className="collapse-title text-xl text-sky-600 font-medium">
                         Are your repair technicians licensed and insured?
                         </div>
                         <div className="collapse-content">
@@ -38,7 +38,7 @@ const Faq = () => {
 
                     <div className="collapse collapse-arrow join-item border border-base-300">
                         <input type="radio" name="my-accordion-4"  />
-                        <div className="collapse-title text-xl text-teal-600 font-medium">
+                        <div className="collapse-title text-xl text-sky-600 font-medium">
                         How long does a typical home repair project take to complete?
                         </div>
                         <div className="collapse-content">

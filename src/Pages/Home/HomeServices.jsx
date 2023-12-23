@@ -27,7 +27,7 @@ const HomeServices = () => {
                 }
             </div>
             <div className="text-center mt-10">
-            <Link to='/services' className="text-white font-medium px-3 py-2 bg-teal-600 mx-auto rounded">View All</Link>
+            <Link to='/services' className="text-white font-medium px-3 py-2 bg-sky-600 mx-auto rounded">View All</Link>
             </div>
         </div>
     );

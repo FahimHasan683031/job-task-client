@@ -1,4 +1,4 @@
-import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { useLoaderData, useLocation } from 'react-router-dom';
 import toast from "react-hot-toast";
 import useAuthContext from '../Hoocks/useAuthContext';
 import useAxiosSecure from '../Hoocks/useAxiosSicure';
@@ -6,99 +6,82 @@ import { useEffect } from 'react';
 
 const UpdateTask = () => {
     const location = useLocation()
-    useEffect(()=>{
-        document.title= "Home Repair"+ location.pathname
-    },[location])
-    const axiosSecure=useAxiosSecure()
+    useEffect(() => {
+        document.title = "Task Manager" + location.pathname
+    }, [location])
+    const axiosSecure = useAxiosSecure()
     const data = useLoaderData()
     const { user } = useAuthContext()
-    const navigate = useNavigate()
     const formHandle = e => {
         e.preventDefault()
         const form = e.target;
-        const serviceName = form.serviceName.value;
-        const serviceImage = form.serviceImage.value;
-        const providerName = form.providerName.value;
-        const email = form.email.value;
-        const price = form.price.value;
-        const area = form.area.value;
-        const providerDescription = form.providerDescription.value;
-        const serviceDescription = form.serviceDescription.value;
-        const providerImage = user.photoURL;
+        const taskTitle = form.taskTitle.value;
+        const date = form.date.value;
+        const time = form.time.value;
+        const priority = form.priority.value;
+        const taskDescription = form.taskDescription.value;
+        const email=user?.email
 
-        const service = { serviceName, serviceImage, providerName, email, price, area, providerDescription, serviceDescription, providerImage }
-        console.log(service)
+        const task = {taskTitle,date,time,priority,taskDescription,email }
 
-        axiosSecure.put(`/api/v1/services/${data._id}`, service)
+
+        axiosSecure.put(`/tasks/${data._id}`, task)
             .then(res => {
                 if (res.data.modifiedCount) {
                     toast.success('Successfully Update Service!')
-                    navigate('/myServices')
+                
                 }
 
             })
-            .catch(err=>console.log(err.message))
+            .catch(err => console.log(err.message))
     }
     return (
         <div className="max-w-screen-xl mx-auto px-6">
-            <form className="max-w-3xl mx-auto bg-teal-100 drop-shadow-lg my-24 px-6 py-8 rounded-lg text-base text-black" onSubmit={formHandle} action="">
+            <form className="max-w-md mx-auto bg-sky-200 drop-shadow-lg my-24 px-6 py-8 rounded-lg text-base text-black" onSubmit={formHandle} action="">
 
-                <h1 className="text-center text-teal-600 mb-12 md:text-5xl text-3xl font-bold">Update Service</h1>
+                <h1 className="text-center text-sky-600 mb-12 md:text-5xl text-3xl font-bold">Update Task</h1>
 
-                <div className="flex flex-col md:flex-row gap-5">
+
+                <div className=" w-full">
+                    <label>
+                        Task Title
+                    </label>
+                    <input required  className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " defaultValue={data.taskTitle} type="text" name="taskTitle" id="" />
+                </div>
+                <div className=" w-full">
+                    <label>
+                        Select Priority
+                    </label>
+                    <select name="priority" required defaultValue={data.priority} className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " id="">
+                        <option disabled value='deafult'>Select Priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Heigh">Heigh</option>
+                    </select>
+                </div>
+
+                <div className="flex gap-4">
                     <div className=" w-full">
                         <label>
-                            Service Name
+                            Select Date
                         </label>
-                        <input required className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " defaultValue={data.serviceName} type="text" name="serviceName" id="" />
+                        <input defaultValue={data.date} name="date" required className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " type="date" id="" />
                     </div>
-
-                    <div className="w-full">
-                        <label >
-                            Service Image URL
-                        </label>
-                        <input required className="px-4 mt-1 w-full py-2 drop-shadow-lg rounded mb-4" defaultValue={data.serviceImage} type="url" name="serviceImage" id="" />
-
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row gap-5">
                     <div className=" w-full">
                         <label>
-                            Your Name
+                            Select Time
                         </label>
-                        <input type="text" className="px-4 mt-1 w-full py-2 drop-shadow-lg rounded mb-4" name="providerName" value={user?.displayName} readOnly id="" />
-                    </div>
-
-                    <div className="w-full">
-                        <label >
-                            Your Email
-                        </label>
-                        <input className="px-4 mt-1 w-full py-2 drop-shadow-lg rounded mb-4" type="email" name="email" value={user?.email} id="" />
+                        <input defaultValue={data.time} name="time" required className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " type="time" id="" />
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-5">
-                    <div className=" w-full">
-                        <label>
-                            price
-                        </label>
-                        <input required className="w-full mt-1 px-4 py-2 drop-shadow-lg mb-4 rounded  " type="text" name="price" defaultValue={data.price} id="" />
-                    </div>
 
-                    <div className="w-full">
-                        <label >
-                            Service Area
-                        </label>
-                        <input required className="px-4 mt-1 w-full py-2 drop-shadow-lg rounded mb-4" type="text" name="area" defaultValue={data.area} id="" />
-                    </div>
-                </div>
-                <div className="flex flex-col md:flex-row  gap-5">
-                    <textarea required className=" my-6 drop-shadow-lg p-3 rounded flex-1 " name="serviceDescription" placeholder="Enter Service Description" defaultValue={data.serviceDescription} id="" rows="5"></textarea>
-                    <textarea required className=" my-6 drop-shadow-lg p-3 rounded flex-1" name="providerDescription" placeholder="Enter provider Description" defaultValue={data.providerDescription} id="" rows="5"></textarea>
-                </div>
 
-                <input className="w-full font-bold my-5 cursor-pointer py-3 rounded-md text-white bg-teal-600" type="submit" value="Submit" />
+
+                <textarea defaultValue={data.taskDescription} required className=" my-3 w-full md:my-6 drop-shadow-lg p-3 rounded flex-1 " name="taskDescription" placeholder="Enter Task Description" id="" rows="5"></textarea>
+
+
+                <input className="w-full font-bold my-3 cursor-pointer py-3 rounded-md text-white bg-sky-600" type="submit" value="Update" />
             </form>
 
         </div>

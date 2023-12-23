@@ -9,24 +9,24 @@ const Header = () => {
         .catch(error=>console.log(error))
     }
     return (
-        <div className=" shadow-md bg-teal-100 z-50 relative">
+        <div className=" shadow-md bg-sky-100 z-50 relative">
             <div className="flex justify-between items-center   max-w-screen-xl mx-auto px-6 ">
                 <div className="">
                     <img className="w-[40px] h-[40px] mx-auto" src={'https://i.ibb.co/wBp0z2L/home-repair-logo-with-maintenance-tools-and-house-vector-26674415-removebg-preview.png'} alt="" />
-                    <h1 className="text-lg text-teal-600 pb-1 font-bold"><span className="text-slate-700">HOME</span> REPAIR</h1>
+                    <h1 className="text-lg text-sky-600 pb-1 font-bold"><span className="text-slate-700">HOME</span> REPAIR</h1>
                 </div>
 
                 <div className="hidden lg:flex">
                     <ul className="menu text-base font-medium text-gray-700 menu-horizontal px-1">
                         <li><Link to='/'>Home</Link>
                         </li>
-                        <li><Link to='/allTasks'>All Task</Link>
+                        <li><Link to='dashboard'>Task Mange dashboard</Link>
                         </li>
-                        <li><Link to='/createTask'>Create Task</Link>
+                        <li><Link to='/contactUs'>Contact Us</Link>
                         </li>
-
-                        <li><Link to='/manageTasks'>Manage Tasks</Link>
+                        <li><Link to='/aboutUs'>About Us</Link>
                         </li>
+                        
                         
 
                     </ul>
@@ -37,7 +37,7 @@ const Header = () => {
                             user?<img src={user?.photoURL} className="h-8 w-8 rounded-full " alt="" />:''
                         }
                         {
-                            user?<button className="text-sm md:text-base text-white font-normal md:font-medium px-2 md:px-3 py-1 rounded-full bg-teal-600" onClick={signoutHandle}>Logout</button>:<Link className="text-sm md:text-base text-white font-normal md:font-medium px-2 md:px-3 py-1 rounded-full bg-teal-600" to='/login'>login</Link>
+                            user?<button className="text-sm md:text-base text-white font-normal md:font-medium px-2 md:px-3 py-1 rounded-full bg-sky-600" onClick={signoutHandle}>Logout</button>:<Link className="text-sm md:text-base text-white font-normal md:font-medium px-2 md:px-3 py-1 rounded-full bg-sky-600" to='/login'>login</Link>
                         }
                         
                     </div>
