@@ -9,11 +9,11 @@ const Header = () => {
         .catch(error=>console.log(error))
     }
     return (
-        <div className=" shadow-md bg-sky-100 z-50 relative">
+        <div className=" shadow-md py-2 bg-sky-200 z-50 relative">
             <div className="flex justify-between items-center   max-w-screen-xl mx-auto px-6 ">
                 <div className="">
-                    <img className="w-[40px] h-[40px] mx-auto" src={'https://i.ibb.co/wBp0z2L/home-repair-logo-with-maintenance-tools-and-house-vector-26674415-removebg-preview.png'} alt="" />
-                    <h1 className="text-lg text-sky-600 pb-1 font-bold"><span className="text-slate-700">HOME</span> REPAIR</h1>
+                    
+                    <h1 className="text-2xl text-sky-600 pb-1 font-bold"><span className="text-slate-700">TASK</span> MANAGER</h1>
                 </div>
 
                 <div className="hidden lg:flex">

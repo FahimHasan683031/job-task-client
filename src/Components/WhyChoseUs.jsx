@@ -7,7 +7,7 @@ const WhyChoseUs = () => {
             <div  className="text-center lg:text-left">
                 <p className="text-lg font-medium text-sky-600 py-3">Our advantages</p>
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#242424] leading-8 lg:leading-[50px]">Why do people trust <br /> our company?</h1>
-                <p className="text-sm md:text-base font-medium text-gray-500 leading-8 my-3 md:pr-12">We will be happy to take on the implementation of a project of any complexity. We guarantee the quality of our work and have many <br />  years of experience in the field of repair.</p>
+                <p className="text-sm md:text-base font-medium text-gray-500 leading-8 my-3 md:pr-12">We will be happy to take on the implementation of a project of any complexity. We guarantee the quality of our work and have many <br />  years of experience in the.</p>
                 <button className="px-3 py-2 text-white font-medium bg-sky-600 my-3">View More</button>
             </div>
             <div  className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -18,7 +18,7 @@ const WhyChoseUs = () => {
                 </div>
                 <div className="p-4 border-[4px] border-sky-10">
                     <h1 className="text-3xl font-bold text-sky-600 my-3">02.</h1>
-                    <h2 className="text-2xl font-bold text-[#242424] my-3">Goodwill</h2>
+                    <h2 className="text-2xl font-bold text-[#242424] my-3">Support</h2>
                     <p className="text-base font-normal text-gray-500 leading-7">Even if your less into design and more into content</p>
                 </div>
                 <div className="p-4 border-[4px] border-sky-10">
@@ -28,7 +28,7 @@ const WhyChoseUs = () => {
                 </div>
                 <div className="p-4 border-[4px] border-sky-10">
                     <h1 className="text-3xl font-bold text-sky-600 my-3">04.</h1>
-                    <h2 className="text-2xl font-bold text-[#242424] my-3">Loyalty</h2>
+                    <h2 className="text-2xl font-bold text-[#242424] my-3">High Security</h2>
                     <p className="text-base font-normal text-gray-500 leading-7">Management system, got a license for it or adapted</p>
                 </div>
             </div>
